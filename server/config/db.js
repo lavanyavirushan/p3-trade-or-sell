@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
-const connectDB = async () => {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(
+    "mongodb://localhost:27017/trade-sell",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
-    console.log('MONGODB Connected');
-};
-
-module.exports = connectDB;
+module.exports = mongoose.connection;

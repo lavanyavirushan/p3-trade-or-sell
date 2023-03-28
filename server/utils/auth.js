@@ -24,7 +24,7 @@ module.exports = {
 
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
-      const user = await Users.findOne({ _id: data._id })
+      const user = await Users.findOne({ _id: data._id, deletedAt: null })
       req.user = user;
     } catch {
       console.log('Invalid token');

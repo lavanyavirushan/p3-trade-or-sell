@@ -1,3 +1,4 @@
+
 import {Routes, Route} from 'react-router-dom';
 import homepage from './pages/homepage';
 import browse from './pages/browse';
@@ -18,3 +19,5 @@ const App = () => {
         </>
     )
 }
+
+export default App;

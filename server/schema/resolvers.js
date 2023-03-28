@@ -41,7 +41,7 @@ const resolvers = {
     },
 
     diactivateUser: async (parent, { userId }, context) => {
-        if (context.user.type == "admin") {
+        if (context.user && context.user.type == "admin") {
             return await Users.findByIdAndUpdate({ _id: userId }, {deletedAt: new Date()});
         }
         throw new AuthenticationError('Not logged in');

@@ -27,6 +27,8 @@
     "express-graphql": "^0.12.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.2"
+    "mongoose": "^7.0.2",
+    "react-router-dom": "^6.9.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

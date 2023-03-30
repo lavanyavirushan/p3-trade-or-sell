@@ -1,6 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Category } = require('../../models');
-const { signToken } = require('../../utils/auth');
 
 const categoryResolver = {
   Query: {

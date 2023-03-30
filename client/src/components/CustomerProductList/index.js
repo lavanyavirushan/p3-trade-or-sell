@@ -48,8 +48,9 @@ function ProductList() {
       <h2>Our Products:</h2>
       {state.products.length ? (
         <div className="flex-row">
-          {filterProducts().map((product) => (
-            <ProductItem
+          {filterProducts().map((product) => {
+            console.log(product);
+            return <ProductItem  
               key={product._id}
               _id={product._id}
               image={product.image}
@@ -57,7 +58,7 @@ function ProductList() {
               price={product.price}
               quantity={product.quantity}
             />
-          ))}
+           } )}
         </div>
       ) : (
         <h3>You haven't added any products yet!</h3>

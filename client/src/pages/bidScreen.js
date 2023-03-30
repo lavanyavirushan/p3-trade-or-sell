@@ -2,7 +2,7 @@
 
 const bidScreen = () => {
     
-
+    
 
     return (
         <>

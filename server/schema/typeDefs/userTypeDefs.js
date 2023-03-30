@@ -17,8 +17,10 @@ const userTypeDefs = gql`
   }
 
   type Query {
-    allUsers: [Users]
+    users: [Users]
     user(userId: ID!): Users
+    myOffers: [BidOrBuy]
+    myListings: [Products]
   }
 
   type Mutation {

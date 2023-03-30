@@ -1,11 +1,12 @@
+import React, { useState, useEffect } from 'react';
 
+const BuyScreen = () => {
+    const [openAuctions, addNewAuction] = useState({});
 
-const BidScreen = () => {
-    
 
     return (
-        <> 
-        <h1>Bidding Screen</h1>
+        <>
+        <h1>Buy screen</h1>
         <div className="item-display">
             <img src="">
 
@@ -17,9 +18,7 @@ const BidScreen = () => {
                 <h4 className="item-price">
                     Item Price here
                 </h4>
-                <input type="text" className="offer-value"/>
-                <label for="offer-value">How much will you offer?</label>
-                <input type="submit" className="make-offer" value="Make Offer!"/>
+                <input type="submit" className="make-offer" value="Buy!"/>
                 
             </div>
         </div>
@@ -27,4 +26,4 @@ const BidScreen = () => {
     );
 };
 
-export default BidScreen;
+export default BuyScreen;

@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-const browse = () => {
+const Browse = () => {
     const [openAuctions, addNewAuction] = useState({});
 
 
     return (
         <>
-        
+        <div className="item-display">
+        <h1>Current open auctions</h1>
+        <li>Cards for each item</li>
+        </div>
         </>
     );
 };
 
-export default browse;
+export default Browse;

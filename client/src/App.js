@@ -7,6 +7,7 @@ import PostItem from './pages/postItem';
 import ViewItem from './pages/viewItem';
 import BidScreen from './pages/bidScreen';
 import BuyScreen from './pages/buyScreen';
+import MyAccount from './pages/myAccount';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                         <Route path ="/viewItem" element={<ViewItem/>}></Route>
                         <Route path ="/bidScreen" element={<BidScreen/>}></Route>
                         <Route path ="/buyScreen" element={<BuyScreen/>}></Route>
+                        <Route path ="/myAccount" element={<MyAccount/>}></Route>
                     </Routes>
                 </div>
             </div>              

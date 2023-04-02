@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import navBar from '../components/Navbar'
+
 
 const Homepage = () => {
     const [openAuctions, addNewAuction] = useState({});

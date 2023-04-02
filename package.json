@@ -1,37 +1,19 @@
 {
-  "name": "p3-trade-or-sell",
+  "name:": "p3-trade-or-sell",
   "version": "1.0.0",
-  "description": "Project 3",
-  "main": "index.js",
+  "description": "",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lavanyavirushan/p3-trade-or-sell.git"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lavanyavirushan/p3-trade-or-sell/issues"
-  },
-  "homepage": "https://github.com/lavanyavirushan/p3-trade-or-sell#readme",
-  "dependencies": {
-    "apollo-server": "^3.12.0",
-    "apollo-server-express": "^3.12.0",
-    "bcrypt": "^5.1.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-graphql": "^0.12.0",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.2",
-    "react-router-dom": "^6.9.0",
-    "subgraph": "^2.1.0"
-  },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "concurrently": "^5.1.0"
   }
 }

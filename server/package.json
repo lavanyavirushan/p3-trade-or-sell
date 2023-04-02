@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node config/seeds.js",
-    "server": "nodemon server.js --ignore client"
+    "seed": "node config/seeds.js"
   },
   "keywords": [],
   "author": "",
@@ -24,5 +23,4 @@
   "devDependencies": {
     "nodemon": "^2.0.2"
   }
-  
 }

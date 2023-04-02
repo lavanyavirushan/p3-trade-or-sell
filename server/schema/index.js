@@ -8,7 +8,6 @@ const categoryTypeDefs = require('./typeDefs/categoryTypeDefs');
 const productTypeDefs = require('./typeDefs/productTypeDefs');
 
 
-const { buildSubgraphSchema } = require("@apollo/subgraph");
 
 const schema = buildSubgraphSchema([
     { typeDefs: userTypeDefs, resolvers: userResolver },

@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const moment = require('moment')
 
 const categorySchema = new Schema({
   name: {
@@ -13,11 +14,13 @@ const categorySchema = new Schema({
   },
   createdAt : { 
     type : Date, 
-    default: Date.now 
+    default: Date.now,
+    get: createdAtVal => moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"), 
   },
   deletedAt: {
     type: Date,
-    default: null
+    default: null,
+    get: deletedAtVal => moment(deletedAtVal).format("MMM DD, YYYY [at] hh:mm a"), 
   },
 });
 

@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const moment = require('moment')
 
 const usersSchema = new Schema({
   name: {
@@ -21,11 +22,13 @@ const usersSchema = new Schema({
   },
   createdAt : { 
     type : Date, 
-    default: Date.now 
+    default: Date.now,
+    get: createdAtVal => moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"), 
   },
   deletedAt: {
     type: Date,
-    default: null
+    default: null,
+    get: deletedAtVal => moment(deletedAtVal).format("MMM DD, YYYY [at] hh:mm a"),
   },
   type: {
     type: String,

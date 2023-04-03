@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const moment = require('moment')
 
 const bidOrBuySchema = new Schema({
   productId:{
@@ -17,7 +18,8 @@ const bidOrBuySchema = new Schema({
   },
   offerByTime: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    get: offerByTimeVal => moment(offerByTimeVal).format("MMM DD, YYYY [at] hh:mm a"),
   }
 });
 

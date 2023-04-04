@@ -8,12 +8,13 @@ require('dotenv').config()
 const schema = require('./schema');
 const db = require('./config/db');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 const app = express();
 const server = new ApolloServer({
   schema,
   context: authMiddleware,
-  plugins: [ApolloServerPluginInlineTraceDisabled()]
+  plugins: [ApolloServerPluginInlineTraceDisabled()],
+  cache: 'bounded'
 });
 
 app.use(express.urlencoded({ extended: false }));

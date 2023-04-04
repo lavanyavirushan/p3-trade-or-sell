@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 
-const appNavbar = () => {
 
+
+const Navbar = () => {
     return (
-        <>
-            <Navbar bg='dark'>
-
-            </Navbar>
-        </>
+        <nav className="navBar">            
+            <button className='homeButton'><Link to="/">AppName</Link></button>      
+        <div className="navBar-content">
+            <ul>
+                    <div className='navBar-links'>
+                    <li><Link to="/browse">Browse open auctions</Link></li>
+                    <li><Link to="/postItem">Post new auction</Link></li>
+                    </div>
+            </ul>            
+        </div>
+        </nav>        
     );
-};
+}
 
-export default appNavbar;
+export default Navbar;

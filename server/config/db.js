@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
-const connectDB = async () => {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(
+  "mongodb+srv://lavanyavirushan:VDaIzpnmp0ZlOeZp@cluster0.wiakdgj.mongodb.net/trade-sell?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
-    console.log('MONGODB Connected');
-};
-
-module.exports = connectDB;
+module.exports = mongoose.connection;

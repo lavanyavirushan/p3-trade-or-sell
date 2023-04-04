@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Lavanya Virushan",
+    "email": "lavanya@virushan.dev",
+    "password": "password01"
+  },
+  {
+    "name": "Virushan Maheswaran",
+    "email": "vmaheswaran@virushan.dev",
+    "password": "password02",
+    "type": "admin"
+  }
+]

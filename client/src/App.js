@@ -1,23 +1,31 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import './App.css';
+import Homepage from './pages/homepage';
+import Browse from './pages/browse';
+import PostItem from './pages/postItem';
+import ViewItem from './pages/viewItem';
+import BidScreen from './pages/bidScreen';
+import BuyScreen from './pages/buyScreen';
 
-import {Routes, Route} from 'react-router-dom';
-import homepage from './pages/homepage';
-import browse from './pages/browse';
-import postItem from './pages/postItem';
-import viewItem from './pages/viewItem';
-import bidScreen from './pages/bidScreen';
-
-const App = () => {
-    return (
-        <>
-            <Routes>
-                <Route path ="/" element={<homepage />} />
-                <Route path ="/browse" element={<browse />} />
-                <Route path ="/postItem" element={<postItem />} />
-                <Route path ="/viewItem" element={<viewItem />} />
-                <Route path ="/bidScreen" element={<bidScreen />} />
-            </Routes>
-        </>
-    )
+function App() {
+  return (
+    <Router> 
+            <div className="App">
+                <Navbar/>
+                <div className="content">                  
+                    <Routes>
+                        <Route exact path ="/" element={<Homepage/>}></Route>
+                        <Route path ="/browse" element={<Browse/>}></Route>
+                        <Route path ="/postItem" element={<PostItem/>}></Route>
+                        <Route path ="/viewItem" element={<ViewItem/>}></Route>
+                        <Route path ="/bidScreen" element={<BidScreen/>}></Route>
+                        <Route path ="/buyScreen" element={<BuyScreen/>}></Route>
+                    </Routes>
+                </div>
+            </div>              
+    </Router>
+  );
 }
 
 export default App;

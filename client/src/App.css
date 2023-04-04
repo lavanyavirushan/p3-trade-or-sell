@@ -1,0 +1,43 @@
+.App {
+  
+  height: 100%;
+}
+
+.navBar {
+  background-color: darkslateblue;
+  position: sticky;
+  top: 0;  
+  padding: 10px;
+  border: 2px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBar-contents{
+  display: inline;
+  justify-content: right;
+}
+
+.navBar-links li{
+  list-style-type: none;
+  background-color: white;
+  float: right;
+  border: 2px solid;
+  padding: 20px;
+}
+
+.item-display {
+  justify-self: center;
+  margin: auto;
+  width: 75%;
+  border: 3px solid;
+}
+
+.description-field, .price-field, .postType {
+  margin: 10px;
+}
+
+.item-display {
+  padding: 20px;
+  margin-top: 20px;
+}
